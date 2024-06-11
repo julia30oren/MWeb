@@ -1,0 +1,24 @@
+.container-fluid{
+    max-width: 90%;
+    margin: auto;
+}
+
+footer a{
+    color: black;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.media-link{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    background-color: black;
+    border-radius: 5px;
+}
+

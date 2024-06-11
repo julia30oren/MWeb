@@ -7,7 +7,7 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'blog', component: BlogComponent },
     { path: 'portfolio', component: PortfolioComponent },
-    { path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
+    { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `home`
     { path: '**', 
         loadComponent: () =>
             import('./components/pnf/pnf.component').then((c)=>c.PnfComponent), // lazy load of component
