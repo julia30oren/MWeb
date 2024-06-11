@@ -1,0 +1,39 @@
+.blog {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blog-card {
+    width: 100%;
+}
+
+.col-md-4 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px 0 0 5px;
+}
+
+#post-1 {
+    background-image: url('../../../../public/bl-resp.jpg');
+}
+
+#post-2 {
+    background-image: url('../../../../public/bl-color.png');
+}
+
+#post-3 {
+    background-image: url('../../../../public/bl-ai.jpg');
+}
+
+#post-4 {
+    background-image: url('../../../../public/bl-wsag.jpg');
+}
+
+#post-5 {
+    background-image: url('../../../../public/bl-font.jpg');
+}
