@@ -1,10 +1,12 @@
 import { Routes } from '@angular/router';
-import {FirstComponent} from './components/first/first.component';
-import {SecondComponent} from './components/second/second.component';
+import { HomeComponent } from './components/home/home.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 export const routes: Routes = [
-    { path: 'first-component', component: FirstComponent },
-    { path: 'second-component', component: SecondComponent },
+    { path: 'home', component: HomeComponent },
+    { path: 'blog', component: BlogComponent },
+    { path: 'portfolio', component: PortfolioComponent },
     { path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
     { path: '**', 
         loadComponent: () =>
