@@ -1,3 +1,17 @@
+.ad{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.ad img{
+    width:49%;
+}
+.ad p{
+    width: 49%;
+}
+
+/* Auto carousel */
 @-webkit-keyframes scroll-left {
     0% {
         transform: translateX(20px);
