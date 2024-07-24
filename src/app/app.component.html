@@ -1,71 +1,17 @@
-<header>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">{{title}}</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/home" routerLinkActive="active"
-              ariaCurrentWhenActive="page">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/blog" routerLinkActive="active" ariaCurrentWhenActive="page">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/portfolio" routerLinkActive="active"
-              ariaCurrentWhenActive="page">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Boston</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+<!-- <div class="container"> -->
 
-<!-- The routed views render in the <router-outlet> - main components -->
+<h2>Testing Routs</h2>
+<!-- <app-header></app-header> -->
+<nav>
+  <ul>
+    <li><a routerLink="/first-component" routerLinkActive="active">
+        First
+      </a></li>
+    <li><a routerLink="/secont-component" routerLinkActive="active">
+        Second
+      </a></li>
+  </ul>
+</nav>
+
 <router-outlet></router-outlet>
-
-<footer class="navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" routerLink="/home" routerLinkActive="active"
-          ariaCurrentWhenActive="page">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/blog" routerLinkActive="active" ariaCurrentWhenActive="page">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/portfolio" routerLinkActive="active" ariaCurrentWhenActive="page">Portfolio</a>
-      </li>
-    </ul>
-
-    <div class="social-media">
-      <small>© {{date | date:'YYYY'}} Yulia Orendovskyi. All Rights Reserved.</small>
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="https://www.linkedin.com/in/yulia-o-026a30b6">
-            <img class="media-link" src="icon-linkedin.svg"></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/julia30oren">
-            <img class="media-link" src="icon-github.svg">
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="mailto:yuliaoren89@gmail.com" subject="Hi from the website">
-            <img class="media-link" src="icon-email.svg">
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-216011
+<!-- </div> -->
