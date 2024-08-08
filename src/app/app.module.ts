@@ -1,25 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.modul';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AboutComponent } from './components/about/about.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { BlogComponent } from './components/blog/blog.component';
-import { PnfComponent } from './components/pnf/pnf.component';
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
-import { RouterModule } from '@angular/router';
+import { RoutingModule } from './routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-FirstComponent,
-SecondComponent
+    HeaderComponent,
+    FooterComponent,
+    AboutComponent,
+    PortfolioComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([]),
-    AppRoutingModule 
+    FormsModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

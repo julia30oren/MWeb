@@ -1,0 +1,96 @@
+.post-card-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 70px 0;
+}
+
+.card h2{
+    padding-bottom: 10px;
+}
+
+.card-img-div,
+.card-txt-div {
+    width: 46%;
+}
+
+.card-txt-div {
+    border-radius: 50px;
+    padding: 3%;
+    background: #ffdef286;
+    box-shadow: 6px 10px 12px #ebb9d7bb, -6px -10px 12px #ffffff7a;
+
+}
+
+.card-img-div {
+    border-radius: 50px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+    background: lightgrey;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+    background-position: center;
+    background-size: 110%;
+    position: relative;
+    z-index: 1;
+    transition: all .5s ease-in-out;
+}
+
+#card-img-1 {
+    background-image: url('../../../../public/bl-resp.jpg');
+}
+
+#card-img-2 {
+    background-image: url('../../../../public/bl-color.png');
+}
+
+#card-img-3 {
+    background-image: url('../../../../public/bl-ai.jpg');
+}
+
+#card-img-4 {
+    background-image: url('../../../../public/bl-wsag.jpg');
+}
+
+#card-img-5 {
+    background-image: url('../../../../public/bl-font.jpg');
+}
+
+#card-img-6 {
+    background-image: url('../../../../public/bl-ad.jpg');
+}
+
+.card-img-div:hover {
+    background-size: 120%;
+    transition: all 1s ease-in-out;
+}
+
+.reed-more-line {
+    width: 100%;
+    margin-top: 42px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reed-more-line a {
+    text-decoration: none;
+    height: 50px;
+    width: 50px;
+    color: #090909;
+    padding: 0.7em;
+    font-size: 24px;
+    border-radius: 100%;
+    background: #e8e8e800;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #ebb9d7, -6px -6px 12px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reed-more-line a:hover {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #ebb9d7, inset -4px -4px 12px #ffffff;
+}

@@ -1,27 +1,76 @@
-<div class="main">
-    <h2>Portfolio</h2>
+<style>
+    .portfolio{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-    <div class="row align-items-start">
-        <div class="col-md-3 col-sm-6">
-          <img class="img-thumbnail" src="https://i.pinimg.com/564x/59/e9/5f/59e95ffa45815524e2b73f7c21008b0e.jpg" style="width:100%">
-          <img class="img-thumbnail" src="https://i.pinimg.com/564x/1f/14/ef/1f14ef3bc5fcf2d24dc40a7a0558c5ea.jpg" style="width:100%">
-          <img class="img-thumbnail" src="https://i.pinimg.com/564x/06/78/c0/0678c04aa6f5f94760b20bb14db16441.jpg" style="width:100%">
+    .portfolio-col{
+        max-width: 24%;
+    }
+
+    .portfolio-col img{
+        margin-bottom: 20px;
+        border-radius: 24px;
+        width: 100%;
+    }
+</style>
+
+<div class="mrg-t-50">
+    <!-- <h2>Portfolio</h2> -->
+    
+    <div class="portfolio">
+        <div class="portfolio-col">
+          <img src="https://i.pinimg.com/564x/59/e9/5f/59e95ffa45815524e2b73f7c21008b0e.jpg">
+          <img src="https://i.pinimg.com/564x/1f/14/ef/1f14ef3bc5fcf2d24dc40a7a0558c5ea.jpg">
+          <img src="https://i.pinimg.com/564x/06/78/c0/0678c04aa6f5f94760b20bb14db16441.jpg">
         </div>
-        <div class="col-md-3 col-sm-6">
-            <img class="img-thumbnail" src="https://i.pinimg.com/736x/40/72/80/4072809deabbf6de8b857d0f8c64ae14.jpg" style="width:100%">
-            <img class="img-thumbnail" src="https://i.pinimg.com/564x/cf/0e/30/cf0e303f551a3df8b780c4779ebf2a55.jpg" style="width:100%">
-            <img class="img-thumbnail" src="https://i.pinimg.com/564x/5d/49/13/5d4913d4e47dcfb2656bdcaed4f6b23e.jpg" style="width:100%">
+        <div class="portfolio-col">
+            <img src="https://i.pinimg.com/736x/40/72/80/4072809deabbf6de8b857d0f8c64ae14.jpg">
+            <img src="https://i.pinimg.com/564x/cf/0e/30/cf0e303f551a3df8b780c4779ebf2a55.jpg">
+            <img src="https://i.pinimg.com/564x/5d/49/13/5d4913d4e47dcfb2656bdcaed4f6b23e.jpg">
         </div>
-        <div class="col-md-3 col-sm-6">
-          <img class="img-thumbnail" src="https://i.pinimg.com/564x/e6/d1/e6/e6d1e6c3605a13ef7faab91456217a05.jpg" style="width:100%">
-          <img class="img-thumbnail" src="https://i.pinimg.com/564x/18/d3/89/18d3898757986796903a0d705ca84562.jpg" style="width:100%">
-          <img class="img-thumbnail" src="https://i.pinimg.com/564x/aa/e0/e7/aae0e7e0fbe205c63b6426831d86e5f0.jpg" style="width:100%">
-          <img class="img-thumbnail" src="https://i.pinimg.com/564x/67/e7/dc/67e7dc5f1b7e800c58bcd2b601aa319a.jpg" style="width:100%">
+        <div class="portfolio-col">
+          <img src="https://i.pinimg.com/564x/e6/d1/e6/e6d1e6c3605a13ef7faab91456217a05.jpg">
+          <img src="https://i.pinimg.com/564x/18/d3/89/18d3898757986796903a0d705ca84562.jpg">
+          <img src="https://i.pinimg.com/564x/aa/e0/e7/aae0e7e0fbe205c63b6426831d86e5f0.jpg">
+          <img src="https://i.pinimg.com/564x/67/e7/dc/67e7dc5f1b7e800c58bcd2b601aa319a.jpg">
         </div>  
-        <div class="col-md-3 col-sm-6">
-          <img class="img-thumbnail" src="https://i.pinimg.com/736x/7d/3a/e0/7d3ae01ffa243f28934c3bb70b774634.jpg" style="width:100%">
-          <img class="img-thumbnail" src="https://i.pinimg.com/564x/4b/38/31/4b383153c4409d62f24541ca07b25924.jpg" style="width:100%">
-          <img class="img-thumbnail" src="https://i.pinimg.com/564x/f6/64/73/f66473f64323ba3b3f9fd993498b98d2.jpg" style="width:100%">
+        <div class="portfolio-col">
+          <img src="https://i.pinimg.com/736x/7d/3a/e0/7d3ae01ffa243f28934c3bb70b774634.jpg">
+          <img src="https://i.pinimg.com/564x/4b/38/31/4b383153c4409d62f24541ca07b25924.jpg">
+          <img src="https://i.pinimg.com/564x/f6/64/73/f66473f64323ba3b3f9fd993498b98d2.jpg">
         </div>
       </div>
+</div>
+
+<div class="mrg-t-50">
+    <h2>Side Projects</h2>
+
+
+    <div class="mrg-t-50" *ngFor="let project of side_projects">
+        <section class="card">
+            <div class="visual">
+                <video autoplay muted loop poster="{{project.media}}.jpg" width="100%">
+                    <source src="{{project.media}}.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="text-content">
+                <h2>{{project.title}}</h2>
+                <div class="technologies">
+                    <small *ngFor="let t of project.technologies">{{t}} {{project.technologies.length >
+                        project.technologies.indexOf(t)+1 ? '&nbsp;/&nbsp;' : ''}}</small>
+                </div><br>
+                
+                <div *ngFor="let p of project.deskription">
+                    <p>{{p}}</p>
+                </div><br>
+                <a class="git-link-btn" href="{{project.link}}" target="_blank">&lsaquo;/&rsaquo; Code</a>
+
+            </div>
+
+        </section>
+    </div>
 </div>

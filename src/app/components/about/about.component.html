@@ -1,0 +1,85 @@
+<div class="bggu--3 mrg-t-50">
+    <h2>Skills&nbsp;</h2>
+    <div *ngFor="let skill of skills">
+        <div>{{skill}} {{skills.length > skills.indexOf(skill)+1 ? '&nbsp;/&nbsp;' : ''}}</div>
+    </div>
+</div>
+
+<div class="bggu--7 mrg-t-50">
+    <h2>Experience&nbsp;Timeline</h2>
+    <div class="btn-d">
+        <p>Download my CV</p>
+        <a class="button" target="_blank"
+            href="https://drive.google.com/file/d/1bBPq8pcAUwALs8fo8iiPSluU2jaX0JRX/view?usp=drive_link"
+            title="Click to download .pdf">
+            <div class="button-box">
+                <span class="button-elem">
+                    <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                        </path>
+                    </svg>
+                </span>
+                <span class="button-elem">
+                    <svg viewBox="0 0 46 40">
+                        <path
+                            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="timeline">
+    <!-- <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div> -->
+    <div class="prnko-2345" *ngFor="let exp of experienceArr">
+
+        <div class="cont {{ifInteger(exp.id) ? 'left' : 'right'}}">
+            <div class="{{ifInteger(exp.id) ? '' : 'exp-date-left'}}">
+                <p>{{ifInteger(exp.id) ? '':exp.date}}</p>
+
+            </div>
+            <div class="content">
+                <h3><span class="job-pos">{{exp.title}}</span> {{exp.company_name ? ' | '+exp.company_name:''}}
+                    {{exp.location ? ' |
+                    '+exp.location:''}}</h3>
+                <div class="description" *ngFor="let desc of exp.description">{{desc}}</div>
+
+                <div class="skills-div">
+                    <div *ngFor="let skill of exp.skills">
+                        <small>{{skill}}</small>
+                    </div>
+                </div>
+            </div>
+            <div class="{{!ifInteger(exp.id) ? '' : 'exp-date-right'}}">
+                <p>{{!ifInteger(exp.id) ? '':exp.date}}</p>
+            </div>
+        </div>
+
+        <div *ngIf="exp.web_link!==''">
+            <a class="link-btn" href="{{exp.web_link}}" target="_blank">Visit Website &#10140;</a>
+        </div>
+
+    </div>
+</div>
+
+
+<p>In 2012, I proudly achieved my Master's degree in Design. Subsequently, in 2019, I eagerly began my career as a
+    web developer.
+    During the challenging times of the COVID pandemic, I proactively operated as a freelance designer and
+    full-stack developer, collaborating with various startups worldwide.</p>
+
+<div class="bggu--3 mrg-t-50">
+    <h2>In the past 3 years,&nbsp;</h2>
+    <div *ngFor="let tes of testimonials">
+        <div>{{tes}}&nbsp;</div>
+    </div>
+</div>
+
+<!-- <div> -->
+
+<!-- </div> -->

@@ -1,3 +1,48 @@
-.img-thumbnail{
-    margin: 20px 0;
+.card{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: self-start;
+    justify-content: space-between;
+    border-radius: 50px;
+    padding: 3%;
+    background: #ffdef286;
+    box-shadow: 6px 10px 12px #ebb9d7bb, -6px -10px 12px #ffffff7a;
+}
+
+.card h2{
+    padding-bottom: 10px;
+}
+
+.card .visual{
+    width: 38%;
+}
+
+.card .visual video{
+    border-radius: 24px;
+}
+
+.card .text-content{
+    width: 52%;
+}
+
+.card .text-content p{
+    margin: 8px 0;
+}
+
+.git-link-btn {
+  color: #525252;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 24px;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  background-color: #ffdef2;
+  box-shadow: 6px 10px 12px #ebb9d7bb, -6px -10px 12px #ffffff7a;  text-decoration: none;
+}
+
+.git-link-btn:hover {
+  border: 1px solid white;
+  color: black;
 }

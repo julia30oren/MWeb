@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-web": {
+    "myCli": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/my-web",
+            "outputPath": "dist/my-cli",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -50,13 +50,7 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -65,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "my-web:build:production"
+              "buildTarget": "myCli:build:production"
             },
             "development": {
-              "buildTarget": "my-web:build:development"
+              "buildTarget": "myCli:build:development"
             }
           },
           "defaultConfiguration": "development"

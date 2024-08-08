@@ -1,0 +1,192 @@
+.timeline {
+    padding: 100px 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.bggu--3 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.bggu--7 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cont {
+    margin: 50px auto;
+    display: flex;
+}
+
+.content {
+    width: 40%;
+    border-radius: 50px;
+    padding: 3%;
+    background-color: #ffdef2;
+    box-shadow: 6px 10px 12px #ebb9d7bb, -6px -10px 12px #ffffff7a;
+}
+
+.skills-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skills-div div {
+    padding: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 50px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 30px -6px inset, rgba(0, 0, 0, 0.3) 0px 10px 20px -12px inset;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.exp-date-left,
+.exp-date-right {
+    width: fit-content;
+    height: fit-content;
+    padding: 3% 0;
+}
+
+.exp-date-left {
+    text-align: right;
+    margin: 0 5%;
+}
+
+.exp-date-right {
+    text-align: left;
+    margin: 0 6%;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+    position: absolute;
+    margin-top: 0;
+    height: 100%;
+    width: 8px;
+    left: calc(50vw - 8px);
+    z-index: -1;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 3px -6px inset, rgba(0, 0, 0, 0.3) 0px 10px 20px -12px inset;
+    border-radius: 4px;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+    width: 8px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(218, 98, 188, 1) 41%, rgba(243, 139, 204, 1) 68%, rgba(255, 146, 213, 1) 79%, rgb(255, 245, 255) 100%);
+    height: 0%;
+    border-radius: 4px;
+}
+
+.btn-d {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button {
+    display: block;
+    position: relative;
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    overflow: hidden;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+}
+
+.button:before,
+.button:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 7px;
+}
+
+.button:before {
+    border: 4px solid #f0eeef;
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+        transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button:after {
+    border: 4px solid #f096eb;
+    transform: scale(1.3);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+}
+
+.button:hover:before,
+.button:focus:before {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button:hover:after,
+.button:focus:after {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+        transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.button-elem {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 18px;
+    /* transform: rotate(180deg); */
+    fill: #f096eb;
+}
+
+.button:hover .button-box,
+.button:focus .button-box {
+    transition: 0.4s;
+    transform: translateX(-56px);
+}
+
+.link-btn {
+    color: #525252;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 24px;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    background-color: #ffdef2;
+    box-shadow: 6px 10px 12px #ebb9d7bb, -6px -10px 12px #ffffff7a;
+    text-decoration: none;
+  }
+  
+  .link-btn:hover {
+    border: 1px solid white;
+    color: black;
+  }

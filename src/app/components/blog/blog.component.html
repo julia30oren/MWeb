@@ -1,1 +1,22 @@
-<h1>Blog Page</h1>
+<div class="mrg-t-50">
+    <!-- <p>{{name}}</p>
+    <input [(ngModel)]="name"> -->
+    <!-- <h2>Blog</h2> -->
+
+    <div *ngFor="let post of postsArr">
+        <div class="post-card-div">
+            <div class="card-img-div" id="card-img-{{post.id}}">
+                <!-- <img src={{post.img}} width="100%"> -->
+            </div>
+
+            <div class="card-txt-div card">
+                <h2>{{post.title}}</h2>
+                <p>{{post.text[0] | slice:0:150}}...</p>
+                <div class="reed-more-line">
+                    <small>{{post.updated}}</small>
+                    <a href="#">&#10140;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
